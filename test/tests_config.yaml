@@ -1,0 +1,24 @@
+schemaVersion: "2.0.0"
+
+commandTests:
+
+  - name: "container-structure-test installation"
+    setup: [["/app/entrypoint.sh"]]
+    command: "which"
+    args: ["container-structure-test"]
+    expectedOutput: ["/usr/local/bin/container-structure-test"]
+
+fileExistenceTests:
+  - name: 'entrypoint script'
+    path: '/app/entrypoint.sh'
+    shouldExist: true
+    permissions: '-rwxr-xr-x'
+
+metadataTest:
+  env:
+    - key: CONTAINER_STRUCTURE_TEST_DOWNLOAD_URL
+      value: https://storage.googleapis.com/container-structure-test/latest/container-structure-test
+  volumes: ["/test-config"]
+  workdir: ["/test-config"]
+  entrypoint: ["/app/entrypoint.sh"]
+  cmd: ["--help"]
