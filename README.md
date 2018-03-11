@@ -3,6 +3,7 @@
 [![Docker Automated build](https://img.shields.io/docker/automated/flopes/container-structure-test-docker.svg)](https://hub.docker.com/r/flopes/container-structure-test-docker)
 [![Docker Pulls](https://img.shields.io/docker/pulls/flopes/container-structure-test-docker.svg)](https://hub.docker.com/r/flopes/container-structure-test-docker)
 [![Docker Stars](https://img.shields.io/docker/stars/flopes/container-structure-test-docker.svg)](https://hub.docker.com/r/flopes/container-structure-test-docker/)
+[![Image Layers](https://images.microbadger.com/badges/image/flopes/container-structure-test-docker.svg)](https://microbadger.com/images/flopes/container-structure-test-docker "Get your own image badge on microbadger.com")
 
 ## How to use ?
 
