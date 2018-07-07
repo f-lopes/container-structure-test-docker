@@ -2,9 +2,9 @@
 
 echo "Downloading latest container-structure-test binary..."
 
-wget -nv "${CONTAINER_STRUCTURE_TEST_DOWNLOAD_URL}" \
+wget -O container-structure-test -nv "${CONTAINER_STRUCTURE_TEST_DOWNLOAD_URL}" \
   && mv container-structure-test /usr/local/bin \
-        && chmod +x /usr/local/bin/container-structure-test \
+  && chmod +x /usr/local/bin/container-structure-test \
   && export PATH=$PATH:/usr/local/bin
 
 container-structure-test $@

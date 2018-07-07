@@ -5,12 +5,13 @@
 [![Docker Stars](https://img.shields.io/docker/stars/flopes/container-structure-test-docker.svg)](https://hub.docker.com/r/flopes/container-structure-test-docker/)
 [![Image Layers](https://images.microbadger.com/badges/image/flopes/container-structure-test-docker.svg)](https://microbadger.com/images/flopes/container-structure-test-docker "Get your own image badge on microbadger.com")
 
+Container structure test binary is only available for OSX or Linux (https://github.com/GoogleCloudPlatform/container-structure-test). Using this Docker image, tests can be launched on a Windows host.
+
 ## How to use ?
 
 ```
-docker run --rm -v path-to-test-config.yaml:/test-config/test_config.yaml \
--v /var/run/docker.sock:/var/run/docker.sock flopes/container-structure-test \
--image ${image-name-to-test} test_config.yaml
+docker run --rm -v "<path-to-tests-config-file>:/test-config/tests_config.yaml" \
+  -v /var/run/docker.sock:/var/run/docker.sock cst "test --image <image-to-test> --config tests_config.yaml"
 ```
 
 More info on container-structure-test usage: https://github.com/GoogleCloudPlatform/container-structure-test.
