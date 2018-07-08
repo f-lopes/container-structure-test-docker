@@ -4,6 +4,7 @@
 [![Docker Pulls](https://img.shields.io/docker/pulls/flopes/container-structure-test-docker.svg)](https://hub.docker.com/r/flopes/container-structure-test-docker)
 [![Docker Stars](https://img.shields.io/docker/stars/flopes/container-structure-test-docker.svg)](https://hub.docker.com/r/flopes/container-structure-test-docker/)
 [![Image Layers](https://images.microbadger.com/badges/image/flopes/container-structure-test-docker.svg)](https://microbadger.com/images/flopes/container-structure-test-docker "Get your own image badge on microbadger.com")
+[![Build Status](https://travis-ci.org/f-lopes/container-structure-test-docker.svg?branch=master)](https://travis-ci.org/f-lopes/container-structure-test-docker)
 
 Container structure test binary is only available for OSX or Linux (https://github.com/GoogleCloudPlatform/container-structure-test). Using this Docker image, tests can be launched on a Windows host.
 
