@@ -15,4 +15,4 @@ echo
 echo "Pulling container-structure-test-docker Docker image...."
 echo
 
-docker pull flopes/container-structure-test-docker
+docker build -t container-structure-test-docker .
