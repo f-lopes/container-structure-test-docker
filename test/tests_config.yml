@@ -12,7 +12,7 @@ fileExistenceTests:
   - name: 'entrypoint script'
     path: '/app/entrypoint.sh'
     shouldExist: true
-    permissions: '-rwxr-xr-x'
+    permissions: '-rwxrwxr-x'
 
 metadataTest:
   env:
