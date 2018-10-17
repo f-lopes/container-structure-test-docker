@@ -19,6 +19,6 @@ metadataTest:
     - key: CONTAINER_STRUCTURE_TEST_DOWNLOAD_URL
       value: https://storage.googleapis.com/container-structure-test/latest/container-structure-test-linux-amd64
   volumes: ["/test-config"]
-  workdir: ["/test-config"]
+  workdir: "/test-config"
   entrypoint: ["/app/entrypoint.sh"]
   cmd: ["--help"]
