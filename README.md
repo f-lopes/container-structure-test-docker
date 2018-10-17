@@ -12,7 +12,26 @@ Container structure test binary is only available for OSX or Linux (https://gith
 
 ```
 docker run --rm -v "<path-to-tests-config-file>:/test-config/tests_config.yaml" \
-  -v /var/run/docker.sock:/var/run/docker.sock cst "test --image <image-to-test> --config tests_config.yaml"
+  -v /var/run/docker.sock:/var/run/docker.sock flopes/container-structure-test-docker "test --image <image-to-test> --config tests_config.yaml"
+```
+
+### Windows
+
+`docker-compose.yml` template:
+```
+version: '3'
+services:
+  docker:
+    image: flopes/container-structure-test-docker
+    volumes:
+      - ".tests_config.yaml:/test-config/tests_config.yaml"
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    command: test --image ${YOUR_IMAGE} --config tests_config.yaml
+```
+
+`.env`
+```
+COMPOSE_CONVERT_WINDOWS_PATHS=1
 ```
 
 More info on container-structure-test usage: https://github.com/GoogleCloudPlatform/container-structure-test.
